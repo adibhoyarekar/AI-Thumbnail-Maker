@@ -1,13 +1,8 @@
 import { GoogleGenAI, Modality, GenerateContentResponse, Part, Type } from "@google/genai";
 import { TextTone, TextStyle, BulkResult, BulkInputItem, CTRScoreResult } from "../types";
 
-// Ensure the API key is being accessed from environment variables
-const apiKey = process.env.API_KEY;
-if (!apiKey) {
-  throw new Error("API_KEY environment variable not set");
-}
-
-const ai = new GoogleGenAI({ apiKey });
+// Fix: Per coding guidelines, API key must be retrieved from process.env.API_KEY.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const WATERMARK_INSTRUCTION = "Important: Add a small, semi-transparent watermark in the bottom-right corner with the text 'ThumbExpert AI'.";
 
