@@ -1,12 +1,6 @@
-# AI Thumbnail Generator (Created by adibhoyarekar)
+# AI Thumbnail Maker (Created by adibhoyarekar)
 
 This is an advanced web application that leverages a powerful AI engine to generate stunning, high-CTR YouTube thumbnails in seconds. Go from a simple idea, a single photo, or even multiple photos to a set of professional, ready-to-use thumbnails through a powerful and intuitive interface.
-
-### Live Screenshots
-
-| Main Interface | User Dashboard | Login Page |
-| :---: | :---: | :---: |
-| ![Main Interface](screenshots/screenshot-1.png) | ![User Dashboard](screenshots/screenshot-2.png) | ![Login Page](screenshots/screenshot-3.png) |
 
 ## Key Features
 
