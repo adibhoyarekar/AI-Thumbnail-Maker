@@ -1,4 +1,4 @@
-# AI Thumbnail Maker (Created by adibhoyarekar)
+# AI Thumbnail Generator (Created by adibhoyarekar)
 
 This is an advanced web application that leverages a powerful AI engine to generate stunning, high-CTR YouTube thumbnails in seconds. Go from a simple idea, a single photo, or even multiple photos to a set of professional, ready-to-use thumbnails through a powerful and intuitive interface.
 
@@ -8,14 +8,12 @@ This is an advanced web application that leverages a powerful AI engine to gener
 *   **✍️ Advanced Customization & Prompting:** Fine-tune your creation with controls for art style, text overlays, target audience, and language. Provide detailed prompts for maximum creative control.
 *   **💡 AI-Powered Text Suggestions:** Automatically generate catchy, high-impact text ideas for your thumbnails based on your video's title and desired tone.
 *   **🔄 Multiple Variations:** Receive at least 3 unique, high-quality thumbnail options for every request, giving you more creative choices.
-*   **🔐 Full User Authentication:** A complete and secure login/signup system featuring:
-    *   Email & Password login with a full Node.js/Express backend.
-    *   Secure password hashing with `bcryptjs`.
-    *   JSON Web Token (JWT) for session management.
+*   **🔐 Full User Authentication (Simulated):** A complete and secure login/signup system that runs entirely in the browser, using `localStorage` for persistence. Features include:
+    *   Email & Password login.
     *   Social logins (Google & Facebook).
     *   Real-time password strength validation and visual feedback on the signup form.
     *   Optional profile photo uploads with an instant preview.
-*   **👤 Personalized Dashboard:** Track your full creation history and save your favorite thumbnails—all saved securely in a server-side database.
+*   **👤 Personalized Dashboard:** Track your full creation history and save your favorite thumbnails—all saved securely in your browser.
 *   **💎 Premium Feature Suite (Demo):**
     *   **Brand Kit:** Maintain brand consistency by saving logos, color palettes, and fonts.
     *   **Bulk Generator:** Upload a CSV of video titles to get text suggestions for all of them at once.
@@ -23,46 +21,55 @@ This is an advanced web application that leverages a powerful AI engine to gener
 
 ## Technology Stack
 
-*   **Frontend:** React, TypeScript
-*   **Backend:** Node.js, Express.js
-*   **Database:** LowDB (file-based JSON database)
-*   **Authentication:** JWT, bcryptjs
+*   **Frontend:** React, TypeScript, Vite
 *   **Styling:** Tailwind CSS
 *   **Generative AI:** An advanced AI engine for multi-modal image and text generation.
-*   **State Management:** React Context API (for Authentication)
-*   **Image Handling:** `react-image-crop` for a precise, client-side cropping experience.
+*   **State Management & Auth:** React Context API with a simulated backend using `localStorage`.
+*   **Image Handling:** `react-image-crop`
 
-## Full-Stack Local Setup and Installation
+---
 
-To run this project locally, you need to run both the backend server and the frontend client.
+## Local Setup and Installation
 
-### 1. Backend Server Setup
+This is a frontend-only project with a simulated backend.
 
-```bash
-# Navigate into the backend directory
-cd backend
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/ai-thumbnail-generator.git
+    cd ai-thumbnail-generator
+    ```
 
-# Install backend dependencies
-npm install
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-# Run the backend server (it will run on http://localhost:5000)
-npm start
-```
+3.  **Set up Environment Variables:**
+    In the root directory, create a `.env` file and add your Generative AI API key:
+    ```
+    VITE_API_KEY=YOUR_GENERATIVE_AI_API_KEY
+    ```
 
-### 2. Frontend Client Setup
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-Open a **new terminal window** and navigate to the project's root directory.
+The application should now be running, typically at `http://localhost:5173`.
 
-```bash
-# (In the root directory) Install frontend dependencies
-npm install
+---
 
-# Create a .env file in the root directory for your API key
-# Add your Generative AI API key to the file:
-API_KEY=YOUR_GENERATIVE_AI_API_KEY
+## Deployment
 
-# Run the frontend development server (it will run on http://localhost:5173)
-npm run dev
-```
+Since this is now a static frontend application, you can easily deploy it to services like **Vercel**, **Netlify**, or **GitHub Pages**.
 
-The application should now be fully running. You can access it at `http://localhost:5173`.
+### Deploying to Vercel (Recommended)
+
+1.  **Sign up** at [Vercel.com](https://vercel.com/).
+2.  Create a **New Project** and import your GitHub repo.
+3.  **Configuration:**
+    *   Vercel will auto-detect the Vite framework. The default settings are correct.
+4.  **Add Environment Variable:**
+    *   Before deploying, go to the "Environment Variables" section.
+    *   **Key:** `VITE_API_KEY` -> **Value:** Your Google Gemini API key.
+5.  Click **Deploy**. Your site will be live in minutes!
