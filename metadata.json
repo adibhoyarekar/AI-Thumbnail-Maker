@@ -1,0 +1,7 @@
+{
+  "name": "AI Thumbnail Generator",
+  "description": "A web application where users can generate AI-powered thumbnails for YouTube videos, blogs, or social media posts using Google's Gemini models. Customize your thumbnails with different styles, text, and even upload your own base image for AI enhancement.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
